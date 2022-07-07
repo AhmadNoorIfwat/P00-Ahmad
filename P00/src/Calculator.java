@@ -17,5 +17,8 @@ public class Calculator {
 	public int divide (int a, int b) {
 		return a / b;
 	}
+	public int calcAverage(int a, int b, int c, int d, int e) {
+		return (a+b+c+d+e)/5;
+	}
 
 }

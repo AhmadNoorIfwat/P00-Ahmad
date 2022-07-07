@@ -24,5 +24,21 @@ public class HelloWorldTest {
 	    assertEquals(str1, str2);
 
 	}
+	@Test
+	public void testDivideWith0Denominator() {
+		//fail("Not yet implemented")
+		
+		try {
+			Calculator cal = new Calculator();
+			cal.divide(a, c);
+			fail("Expected  an IllegalArgumentException to be thrown");
+			
+		}catch(IllegalArgumentException e) {
+			assertEquals("Division by zero is not supported",  e.getMessage()  );
+		}catch(Throwable t) {
+			assertEquals("Expected an IllegalArgumentException to be thrown", t.getMessage());
+		}
+	}
+	
 
 }

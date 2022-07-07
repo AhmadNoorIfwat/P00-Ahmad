@@ -70,5 +70,31 @@ public class testCalculator {
 		int expected = 2;
 		assertEquals(expected, actual);
 	}
+	@Test
+	public int divide (int a, int b) {
+		//here
+		if (b==0) {
+			throw new IllegalArgumentException("Division by zero is not supported");
+		}
+		return a / b;
+	}
+	
+	@Test
+	public void averageTest() {
+		//Arrange
+		int a = 8;
+		int b = 4;
+		int c = 2;
+		int d = 1;
+		int e = 10;
+		Calculator cal = new Calculator();
+		
+		//Act
+		int actual = cal.calcAverage(a, b, c, d, e);
+		
+		//Assert
+		int expected = 5;
+		assertEquals(expected, actual);
+	}
 
 }
